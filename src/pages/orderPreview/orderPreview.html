@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar class="navbar">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Order Preview</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div *ngFor="let o of orderPrevData" style="height:50px;">
+		<span>{{o.order}}</span><div class="badge pull-right">{{o.qty}}</div>
+	</div>
+	
+	<div class="submitOrder">
+		<button ion-button style="background-color:#00b9e8">Submit</button>
+	</div>	
+</ion-content>
