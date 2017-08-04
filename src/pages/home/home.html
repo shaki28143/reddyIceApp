@@ -1,23 +1,22 @@
 <ion-header>
-  <ion-navbar class="navbar">
-    <button ion-button menuToggle>
+    <ion-navbar class="navbar">
+        <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>ReddyIce</ion-title>
-  </ion-navbar>
+        <ion-title>ReddyIce</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding class="homePage">
-	<h3>Customer Name: Walmart-01</h3>
+    <h3>Customer Name: Walmart-01</h3>
 
-	<div class="placeOrder">
-		<img src="./assets/icon/placeOrder.jpg">
-		<!-- <img src="./assets/icon/reddyice.jpg"> -->
-		<h3 style="color:#2f5597">Place Order</h3>
-	</div>
-	
-	<div class="customerComplain">
-		<img src="./assets/icon/customerComplain.jpg">
-		<h3 style="color:#2f5597">Customer Complain</h3>
-	</div>
+    <div class="placeOrder" (click)="gotoPage()">
+        <img src="./assets/icon/placeOrder.jpg">
+        <h3 style="color:#2f5597">Place Order</h3>
+    </div>
+
+    <div class="customerComplain" (click)="gotoPageComplain()">
+        <img src="./assets/icon/customerComplain.jpg">
+        <h3 style="color:#2f5597">Customer Complain</h3>
+    </div>
 </ion-content>

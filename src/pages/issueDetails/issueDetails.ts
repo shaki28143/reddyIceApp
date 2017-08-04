@@ -15,4 +15,8 @@ export class IssueDetails {
 			timeStarts: dd.getHours() + ':' + dd.getMinutes()
 		}
 	}
+
+	gotoHome(){
+		this.navCtrl.pop();
+	}
 }

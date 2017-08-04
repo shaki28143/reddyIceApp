@@ -1,12 +1,18 @@
+import { CustomerListPage } from '../pages/customer/customer-list';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+
 import { OrderDetails } from '../pages/orderDetails/orderDetails';
 import { OrderPreview } from '../pages/orderPreview/orderPreview';
 import { IssueDetails } from '../pages/issueDetails/issueDetails';
+
+
+import { DashboardPage } from '../pages/dashboard/dashboard';
+
 
 
 @Component({
@@ -15,9 +21,9 @@ import { IssueDetails } from '../pages/issueDetails/issueDetails';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = DashboardPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -25,9 +31,11 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-	  { title: 'OrderDetails', component: OrderDetails },
-	  { title: 'OrderPreview', component: OrderPreview },
-	  { title: 'IssueDetails', component: IssueDetails }
+      { title: 'OrderDetails', component: OrderDetails },
+      { title: 'OrderPreview', component: OrderPreview },
+      { title: 'IssueDetails', component: IssueDetails },
+      { title: 'Dashboard', component: DashboardPage },
+      { title: 'CustomerListPage', component: CustomerListPage }
     ];
   }
 

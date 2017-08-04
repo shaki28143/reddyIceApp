@@ -1,39 +1,40 @@
-ion-input{
-	border-bottom: 1px solid #00b9e8;
+ion-input {
+    border-bottom: 1px solid #00b9e8;
 }
 
-.toolbar-ios ion-title{
-	padding: 0;
+.toolbar-ios ion-title {
+    padding: 0;
 }
 
-.homePage .productDetails{
-	background-color: #FFF;
-	padding: 5px;
-	width:120px;
-	display:inline-block;
-	margin-bottom: 20px;
+.homePage .productDetails {
+    background-color: #FFF;
+    padding: 5px;
+    width: 120px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #000;
 }
 
-.homePage .productDetails ion-icon{
-	font-size: 26px;
+.homePage .productDetails ion-icon {
+    font-size: 26px;
 }
 
-.homePage .productDetails span{
-	font-size: 11px;
+.homePage .productDetails span {
+    font-size: 11px;
 }
 
-.pull-right{
-	float: right;
+.pull-right {
+    float: right;
 }
 
-.button-ios{
-	width: 80%;
+.button-ios {
+    width: 80%;
     height: 35px;
 }
 
-.checkOut{
-	text-align:center;
-	position:fixed;
-	bottom:10px;
-	width:90%;
+.checkOut {
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    width: 90%;
 }
