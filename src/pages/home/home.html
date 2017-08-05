@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="headerContainer">
     <ion-navbar class="navbar">
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -7,16 +7,22 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding class="homePage">
-    <h3>Customer Name: Walmart-01</h3>
-
-    <div class="placeOrder" (click)="gotoPage()">
-        <img src="./assets/icon/placeOrder.jpg">
-        <h3 style="color:#2f5597">Place Order</h3>
+<ion-content class="homePage">
+    <ion-card style="margin: 0; width: 100%; margin-bottom: 12px;">
+      <ion-card-header style="font-weight: 500;">
+        Walmart
+      </ion-card-header>
+    </ion-card>
+    <div class="cartContainer">
+      <div class="placeOrder" (click)="gotoPage()">
+          <img src="./assets/img/order.svg" style="width: 78px;">
+          <h3 class="cartTitle" style="font-size: 20px;font-weight: 300;">Place Order</h3>
+      </div>
     </div>
-
-    <div class="customerComplain" (click)="gotoPageComplain()">
-        <img src="./assets/icon/customerComplain.jpg">
-        <h3 style="color:#2f5597">Customer Complain</h3>
+    <div class="cartContainer">
+      <div class="customerComplain" (click)="gotoPageComplain()">
+          <img src="./assets/img/complaint1.png" style="height: 100px;">
+          <h3 class="cartTitle" style="font-size: 20px;font-weight: 300;">Customer Complain</h3>
+      </div>
     </div>
 </ion-content>

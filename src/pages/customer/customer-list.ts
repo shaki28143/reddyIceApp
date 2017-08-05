@@ -12,7 +12,7 @@ export class CustomerListPage {
 
   }
   customerImageList: any = [
-    "assets/img/customer/images1.png",
+    "assets/img/walmart.png",
     "assets/img/customer/images2.png",
     "assets/img/customer/images3.png",
     "assets/img/customer/images4.jpg",

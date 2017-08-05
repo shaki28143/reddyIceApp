@@ -1,3 +1,7 @@
+.headerContainer.header .toolbar-background {
+  background-color: #049fd9;
+}
+
 .issue-details {
     .badge {
         background-color: red;
@@ -9,7 +13,7 @@
         padding-top: 2px;
     }
     img {
-        width: 80px;
+        width: 40px;
     }
     .pull-left {
         float: left;
@@ -30,5 +34,42 @@
         position: fixed;
         bottom: 10px;
         width: 90%;
+    }
+    .uploaderContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: #fff;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      .uploader {
+        font-size: 35px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .file-uploader:hover {
+        cursor: pointer;
+      }
+    }
+    .description-container {
+      margin-top: 10px;
+      background: #fff;
+      border-radius: 4px;
+      label {
+        padding: 10px 0px 0px 10px;
+        display: inline-block;
+        font-weight: 500;
+      }
+      .input {
+        border-radius: 4px;
+      }
+      .text-input {
+        height: 180px;
+        border: 1px solid #d3d3d3;
+      }
+    }
+    .dateTime {
+      border-radius: 4px;
     }
 }

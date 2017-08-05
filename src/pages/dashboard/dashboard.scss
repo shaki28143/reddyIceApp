@@ -6,3 +6,17 @@
 .bar-icon {
     height: 180px;
 }
+
+.add-margin .text-input-md {
+  margin: 0;
+  padding: 7px 10px;
+  font-size: 13px;
+}
+
+.list-md .item-input.item-input-has-focus:last-child {
+  box-shadow: none;
+}
+
+.text-center:hover {
+  cursor: pointer;
+}

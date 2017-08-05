@@ -9,12 +9,18 @@
 
 <ion-content padding>
     <ion-list>
-        <ion-item *ngFor="let t of customerImageList" (click)="gotoPage()">
+        <ion-item *ngFor="let t of customerImageList" (click)="gotoPage()" style="cursor: pointer">
             <ion-thumbnail item-start>
                 <img [src]="t">
             </ion-thumbnail>
-            <h2>My Neighbor Totoro</h2>
-            <p>Hayao Miyazaki • 1988</p>
+            <div *ngIf="t === 'assets/img/walmart.png'">
+              <h2>Walmart</h2>
+              <p>Richardson • 75081</p>
+            </div>
+            <div *ngIf="t !== 'assets/img/walmart.png'">
+              <h2>My Neighbor Totoro</h2>
+              <p>Hayao Miyazaki • 1988</p>
+            </div>
             <!--<button ion-button clear item-end>View</button>-->
         </ion-item>
     </ion-list>

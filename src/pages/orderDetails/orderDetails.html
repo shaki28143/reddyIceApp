@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="headerContainer">
     <ion-navbar class="navbar">
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -9,7 +9,81 @@
 
 <ion-content padding class="homePage">
     <div>
-        <div class="productDetails">
+      <div class="block">
+        <input type="radio" name="city" id="cityA" checked />
+        <label class="tabTitle" for="cityA"><span>Frequently Ordered</span></label>
+        <div class="info" style="padding: 0;">
+          <ion-content padding>
+            <ion-list>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="assets/img/cocktailcubed.gif">
+                    </ion-thumbnail>
+                    <div>Traditional Cubed Ice</div>
+                    <p>20lb</p>
+                    <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px"><span style="display: inline">+</span>
+                    <!--<button ion-button clear item-end>View</button>-->
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="assets/img/crystalclassic.gif">
+                    </ion-thumbnail>
+                    <h2>Crystal Classic Cubes</h2>
+                    <p>10lb</p>
+                     <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px"><span style="display: inline">+</span>
+                    <!--<button ion-button clear item-end>View</button>-->
+                </ion-item>
+            </ion-list>
+        </ion-content>
+        </div>
+      </div>
+      <div class="block">
+        <input type="radio" name="city" id="cityC" />
+        <label class="tabTitle" for="cityC"><span>More</span></label>
+        <div class="info infoLast" style="padding: 0;">
+          <ion-content padding>
+            <ion-list>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="assets/img/cocktailcubed.gif">
+                    </ion-thumbnail>
+                    <div>Traditional Cubed Ice</div>
+                    <p>20lb</p>
+                    <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px;font-size: 15px;"><span style="display: inline">+</span>
+                    <!--<button ion-button clear item-end>View</button>-->
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="assets/img/crystalclassic.gif">
+                    </ion-thumbnail>
+                    <h2>Crystal Classic Cubes</h2>
+                    <p>10lb</p>
+                     <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px;font-size: 15px;"><span style="display: inline">+</span>
+                    <!--<button ion-button clear item-end>View</button>-->
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="assets/img/blockice.gif">
+                    </ion-thumbnail>
+                    <div>Block Ice</div>
+                    <p>10lb</p>
+                    <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px;font-size: 15px;"><span style="display: inline">+</span>
+                    <!--<button ion-button clear item-end>View</button>-->
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="assets/img/dryice.gif">
+                    </ion-thumbnail>
+                    <h2>Dry Ice</h2>
+                    <p>10lb</p>
+                     <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px; font-size: 15px;"><span style="display: inline">+</span>
+                    <!--<button ion-button clear item-end>View</button>-->
+                </ion-item>
+            </ion-list>
+        </ion-content>
+        </div>
+      </div>
+      <!-- <div class="productDetails">
             <ion-icon ios="ios-remove-circle-outline" md="md-remove-circle-outline"></ion-icon>
             <ion-icon ios="ios-add-circle-outline" md="md-add-circle-outline" style="float:right"></ion-icon>
             <br><br>
@@ -56,10 +130,11 @@
             <ion-input placeholder="10"></ion-input>
             <br>
             <span>10# COCKTAIL - 1000</span>
-        </div>
+        </div> -->
     </div>
 
     <div class="checkOut">
-        <button (click)="gotoPage()" ion-button>Checkout</button>
+        <!-- <button (click)="gotoPage()" ion-button>Checkout</button> -->
+        <button style="background-color: #1679b5; color: #fff" (click)="gotoPage()" ion-button color="primary" round>Checkout</button>
     </div>
 </ion-content>

@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="headerContainer">
     <ion-navbar class="navbar">
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -8,20 +8,21 @@
 </ion-header>
 
 <ion-content padding class="issue-details">
-    <div style="text-align:center;">
-        <img src="./assets/icon/upload.jpg" class="pull-left">
-        <img src="./assets/icon/photo.jpg">
-        <img src="./assets/icon/audio.jpg" class="pull-right">
+    <div class="uploaderContainer">
+        <img class="file-uploader" src="assets/img/upload.svg" alt="">
+        <ion-icon class="uploader" name="camera"></ion-icon>
+        <ion-icon class="uploader" name="mic"></ion-icon>
     </div>
 
     <ion-item class="dateTime">
         <ion-label>Select Date and Time</ion-label>
         <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
     </ion-item>
-
-    <ion-textarea placeholder="Enter a description" style="height:180px;background-color:#e4f8fd"></ion-textarea>
-
+    <div class="description-container">
+      <label>Issue Description</label>
+      <ion-textarea placeholder="Enter a description" style="background-color:#fff; padding: 10px"></ion-textarea>
+    </div>
     <div class="submitOrder">
-        <button ion-button (click)="gotoHome()">Submit</button>
+        <button style="background-color: #1679b5; color: #fff" (click)="gotoHome()" ion-button color="primary" round>Submit</button>
     </div>
 </ion-content>

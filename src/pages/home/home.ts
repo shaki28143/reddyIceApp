@@ -5,7 +5,7 @@ import { IssueDetails } from '../issueDetails/issueDetails';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
 
