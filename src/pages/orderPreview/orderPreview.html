@@ -9,11 +9,11 @@
 
 <ion-content padding>
   <div class="cartListContainer">
-    <div style="display: flex; background:#1679b5;color:#fff; flex-direction: row; justify-content: space-between; width: 100%; padding: 20px; border-bottom: 1px solid #acacac;">
-      <div>Item</div>
-      <div>Quantity</div>
+    <div style="display: flex; background:#1679b5;color:#fff; flex-direction: row; justify-content: space-between; width: 100%; padding: 14px; border-bottom: 1px solid #acacac;">
+      <div style="font-size: 15px; font-weight: 700">Item</div>
+      <div style="font-size: 15px; font-weight: 700">Quantity</div>
     </div>
-    <div *ngFor="let o of orderPrevData" style="display: flex; flex-direction: row; justify-content: space-between; width: 100%; padding: 20px; border-bottom: 1px solid #e6e6e6">
+    <div *ngFor="let o of orderPrevData" style="display: flex; flex-direction: row; justify-content: space-between; width: 100%; padding: 16px; border-bottom: 1px solid #e6e6e6">
       <img src="{{o.image}}" style="width: 20px; height: 20px; margin-right: 10px" >
       <div style="flex-grow: 1">{{o.order}}</div>
       <div>{{o.qty}}</div>
