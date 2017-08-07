@@ -14,15 +14,12 @@
         <ion-icon class="uploader" name="mic"></ion-icon>
     </div>
 
-    <ion-item class="dateTime">
-        <ion-label>Select Date and Time</ion-label>
-        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
-    </ion-item>
+   
     <div class="description-container">
       <label>Issue Description</label>
       <ion-textarea placeholder="Enter a description" style="background-color:#fff; padding: 10px"></ion-textarea>
     </div>
     <div class="submitOrder">
-        <button style="background-color: #1679b5; color: #fff" (click)="gotoHome()" ion-button color="primary" round>Submit</button>
+        <button full  style="background-color: #1679b5; color: #fff" (click)="gotoHome()" ion-button color="primary" >Submit</button>
     </div>
 </ion-content>

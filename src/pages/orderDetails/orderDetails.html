@@ -11,7 +11,10 @@
     <div>
         <div class="block">
             <input type="radio" name="city" id="cityA" checked />
-            <label class="tabTitle" for="cityA"><span>Frequently Ordered</span></label>
+            <label (click)="toggle()" class="tabTitle" for="cityA"><span>Frequently Ordered</span>
+            <ion-icon class="toggle-icon" *ngIf="expanded1" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+             <ion-icon class="toggle-icon" *ngIf="!expanded1" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+            </label>
             <div class="info" style="padding: 0;">
                 <ion-content>
                     <ion-list>
@@ -21,20 +24,28 @@
                             </ion-thumbnail>
                             <div>Traditional Cubed Ice</div>
                             <p>20lb</p>
-                            <ion-row align-items-center>
+                            <!-- <ion-row align-items-center>
                                 <ion-col col-3></ion-col>
                                 <ion-col class="icon-remove">
-                                    <ion-icon (click)= "decrease(1)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+                                    <ion-icon (click)="decrease(1)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
                                 </ion-col>
                                 <ion-col col-3 class="input-container">
-                                    <input [(ngModel)]="counter['1']" placeholder="1" style="width:100%"/>
+                                    <input [(ngModel)]="counter['1']" placeholder="1" style="width:100%" />
                                 </ion-col>
                                 <ion-col class="icon-add">
-                                    <ion-icon (click)= "increase(1)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+                                    <ion-icon (click)="increase(1)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
                                 </ion-col>
-                                
+
+                            </ion-row> -->
+                            <ion-row>
+                                <ion-col col-3>
+                                </ion-col>
+                                <ion-col col-9>
+                                    <input [(ngModel)]="counter['5']" placeholder="1" style="width:100%" />
+                                </ion-col>
+
                             </ion-row>
-                        
+
                             <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
                         <ion-item>
@@ -43,18 +54,26 @@
                             </ion-thumbnail>
                             <h2>Crystal Classic Cubes</h2>
                             <p>10lb</p>
-                            <ion-row align-items-center>
+                            <!-- <ion-row align-items-center>
                                 <ion-col col-3></ion-col>
                                 <ion-col class="icon-remove">
-                                    <ion-icon (click)= "decrease(2)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+                                    <ion-icon (click)="decrease(2)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
                                 </ion-col>
                                 <ion-col col-3 class="input-container">
-                                    <input [(ngModel)]="counter['2']" placeholder="1" style="width:100%"/>
+                                    <input [(ngModel)]="counter['2']" placeholder="1" style="width:100%" />
                                 </ion-col>
                                 <ion-col class="icon-add">
-                                    <ion-icon (click)= "increase(2)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+                                    <ion-icon (click)="increase(2)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
                                 </ion-col>
-                                
+
+                            </ion-row> -->
+                            <ion-row>
+                                <ion-col col-3>
+                                </ion-col>
+                                <ion-col col-9>
+                                    <input [(ngModel)]="counter['5']" placeholder="1" style="width:100%" />
+                                </ion-col>
+
                             </ion-row>
                             <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
@@ -64,7 +83,12 @@
         </div>
         <div class="block">
             <input type="radio" name="city" id="cityC" />
-            <label class="tabTitle" for="cityC"><span>More</span></label>
+            <label (click)="toggle1()" class="tabTitle" for="cityC"><span>More</span>
+             <ion-icon class="toggle-icon" *ngIf="expanded2" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+             <ion-icon class="toggle-icon" *ngIf="!expanded2" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+           
+            </label>
+
             <div class="info infoLast" style="padding: 0;">
                 <ion-content style="padding: 0;">
                     <ion-list>
@@ -74,7 +98,15 @@
                             </ion-thumbnail>
                             <div>Traditional Cubed Ice</div>
                             <p>20lb</p>
-                            <ion-row align-items-center>
+                            <ion-row>
+                                <ion-col col-3>
+                                </ion-col>
+                                <ion-col col-9>
+                                    <input [(ngModel)]="counter['5']" placeholder="1" style="width:100%" />
+                                </ion-col>
+
+                            </ion-row>
+                            <!-- <ion-row align-items-center>
                                 <ion-col col-3></ion-col>
                                 <ion-col class="icon-remove">
                                     <ion-icon (click)= "decrease(3)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
@@ -86,7 +118,7 @@
                                     <ion-icon (click)= "increase(3)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
                                 </ion-col>
                                 
-                            </ion-row>
+                            </ion-row> -->
 
                             <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
@@ -96,7 +128,15 @@
                             </ion-thumbnail>
                             <h2>Crystal Classic Cubes</h2>
                             <p>10lb</p>
-                            <ion-row align-items-center>
+                            <ion-row>
+                                <ion-col col-3>
+                                </ion-col>
+                                <ion-col col-9>
+                                    <input [(ngModel)]="counter['5']" placeholder="1" style="width:100%" />
+                                </ion-col>
+
+                            </ion-row>
+                            <!-- <ion-row align-items-center>
                                 <ion-col col-3>
                                    
        
@@ -111,7 +151,7 @@
                                     <ion-icon (click)= "increase(4)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
                                 </ion-col>
                                 
-                            </ion-row>
+                            </ion-row> -->
                             <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
                         <ion-item>
@@ -120,18 +160,14 @@
                             </ion-thumbnail>
                             <div>Block Ice</div>
                             <p>10lb</p>
-                           <ion-row align-items-center>
-                                <ion-col col-3></ion-col>
-                                <ion-col class="icon-remove">
-                                    <ion-icon (click)= "decrease(5)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+
+                            <ion-row>
+                                <ion-col col-3>
                                 </ion-col>
-                                <ion-col col-3 class="input-container">
-                                    <input [(ngModel)]="counter['5']" placeholder="1" style="width:100%"/>
+                                <ion-col col-9>
+                                    <input [(ngModel)]="counter['5']" placeholder="1" style="width:100%" />
                                 </ion-col>
-                                <ion-col class="icon-add">
-                                    <ion-icon (click)= "increase(5)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
-                                </ion-col>
-                                
+
                             </ion-row>
                             <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
@@ -141,7 +177,15 @@
                             </ion-thumbnail>
                             <h2>Dry Ice</h2>
                             <p>10lb</p>
-                           <ion-row align-items-center>
+                            <ion-row>
+                                <ion-col col-3>
+                                </ion-col>
+                                <ion-col col-9>
+                                    <input [(ngModel)]="counter['5']" placeholder="1" style="width:100%" />
+                                </ion-col>
+
+                            </ion-row>
+                            <!-- <ion-row align-items-center>
                                 <ion-col col-3></ion-col>
                                 <ion-col class="icon-remove">
                                     <ion-icon (click)= "decrease()" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
@@ -153,7 +197,7 @@
                                     <ion-icon (click)= "increase()" ios="ios-add-circle" md="md-add-circle"></ion-icon>
                                 </ion-col>
                                 
-                            </ion-row>
+                            </ion-row> -->
                             <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
                     </ion-list>
@@ -212,6 +256,6 @@
 
     <div class="checkOut">
         <!-- <button (click)="gotoPage()" ion-button>Checkout</button> -->
-        <button style="background-color: #1679b5; color: #fff" (click)="gotoPage()" ion-button color="primary" round>Checkout</button>
+        <button style="background-color: #1679b5; color: #fff" (click)="gotoPage()" ion-button color="primary" full>Checkout</button>
     </div>
 </ion-content>

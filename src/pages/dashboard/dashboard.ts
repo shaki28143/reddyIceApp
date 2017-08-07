@@ -21,6 +21,6 @@ export class DashboardPage {
     });
   }
   goToPage() {
-    this.navCtrl.push(CustomerListPage);
+    this.navCtrl.push(HomePage);
   }
 }
