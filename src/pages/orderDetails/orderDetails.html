@@ -3,87 +3,164 @@
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-        <ion-title>Provice Order Details</ion-title>
+        <ion-title>Provide Order Details</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding class="homePage">
     <div>
-      <div class="block">
-        <input type="radio" name="city" id="cityA" checked />
-        <label class="tabTitle" for="cityA"><span>Frequently Ordered</span></label>
-        <div class="info" style="padding: 0;">
-          <ion-content padding>
-            <ion-list>
-                <ion-item>
-                    <ion-thumbnail item-start>
-                        <img src="assets/img/cocktailcubed.gif">
-                    </ion-thumbnail>
-                    <div>Traditional Cubed Ice</div>
-                    <p>20lb</p>
-                    <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px"><span style="display: inline">+</span>
-                    <!--<button ion-button clear item-end>View</button>-->
-                </ion-item>
-                <ion-item>
-                    <ion-thumbnail item-start>
-                        <img src="assets/img/crystalclassic.gif">
-                    </ion-thumbnail>
-                    <h2>Crystal Classic Cubes</h2>
-                    <p>10lb</p>
-                     <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px"><span style="display: inline">+</span>
-                    <!--<button ion-button clear item-end>View</button>-->
-                </ion-item>
-            </ion-list>
-        </ion-content>
+        <div class="block">
+            <input type="radio" name="city" id="cityA" checked />
+            <label class="tabTitle" for="cityA"><span>Frequently Ordered</span></label>
+            <div class="info" style="padding: 0;">
+                <ion-content>
+                    <ion-list>
+                        <ion-item>
+                            <ion-thumbnail item-start>
+                                <img src="assets/img/cocktailcubed.gif">
+                            </ion-thumbnail>
+                            <div>Traditional Cubed Ice</div>
+                            <p>20lb</p>
+                            <ion-row align-items-center>
+                                <ion-col col-3></ion-col>
+                                <ion-col class="icon-remove">
+                                    <ion-icon (click)= "decrease(1)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+                                </ion-col>
+                                <ion-col col-3 class="input-container">
+                                    <input [(ngModel)]="counter['1']" placeholder="1" style="width:100%"/>
+                                </ion-col>
+                                <ion-col class="icon-add">
+                                    <ion-icon (click)= "increase(1)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+                                </ion-col>
+                                
+                            </ion-row>
+                        
+                            <!--<button ion-button clear item-end>View</button>-->
+                        </ion-item>
+                        <ion-item>
+                            <ion-thumbnail item-start>
+                                <img src="assets/img/crystalclassic.gif">
+                            </ion-thumbnail>
+                            <h2>Crystal Classic Cubes</h2>
+                            <p>10lb</p>
+                            <ion-row align-items-center>
+                                <ion-col col-3></ion-col>
+                                <ion-col class="icon-remove">
+                                    <ion-icon (click)= "decrease(2)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+                                </ion-col>
+                                <ion-col col-3 class="input-container">
+                                    <input [(ngModel)]="counter['2']" placeholder="1" style="width:100%"/>
+                                </ion-col>
+                                <ion-col class="icon-add">
+                                    <ion-icon (click)= "increase(2)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+                                </ion-col>
+                                
+                            </ion-row>
+                            <!--<button ion-button clear item-end>View</button>-->
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </div>
         </div>
-      </div>
-      <div class="block">
-        <input type="radio" name="city" id="cityC" />
-        <label class="tabTitle" for="cityC"><span>More</span></label>
-        <div class="info infoLast" style="padding: 0;">
-          <ion-content padding>
-            <ion-list>
-                <ion-item>
-                    <ion-thumbnail item-start>
-                        <img src="assets/img/cocktailcubed.gif">
-                    </ion-thumbnail>
-                    <div>Traditional Cubed Ice</div>
-                    <p>20lb</p>
-                    <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px;font-size: 15px;"><span style="display: inline">+</span>
-                    <!--<button ion-button clear item-end>View</button>-->
-                </ion-item>
-                <ion-item>
-                    <ion-thumbnail item-start>
-                        <img src="assets/img/crystalclassic.gif">
-                    </ion-thumbnail>
-                    <h2>Crystal Classic Cubes</h2>
-                    <p>10lb</p>
-                     <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px;font-size: 15px;"><span style="display: inline">+</span>
-                    <!--<button ion-button clear item-end>View</button>-->
-                </ion-item>
-                <ion-item>
-                    <ion-thumbnail item-start>
-                        <img src="assets/img/blockice.gif">
-                    </ion-thumbnail>
-                    <div>Block Ice</div>
-                    <p>10lb</p>
-                    <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px;font-size: 15px;"><span style="display: inline">+</span>
-                    <!--<button ion-button clear item-end>View</button>-->
-                </ion-item>
-                <ion-item>
-                    <ion-thumbnail item-start>
-                        <img src="assets/img/dryice.gif">
-                    </ion-thumbnail>
-                    <h2>Dry Ice</h2>
-                    <p>10lb</p>
-                     <span style="display: inline; font-weight: 300; font-size: 25px;">-</span><input placeholder="XX" style="width: 40px; font-size: 15px;"><span style="display: inline">+</span>
-                    <!--<button ion-button clear item-end>View</button>-->
-                </ion-item>
-            </ion-list>
-        </ion-content>
+        <div class="block">
+            <input type="radio" name="city" id="cityC" />
+            <label class="tabTitle" for="cityC"><span>More</span></label>
+            <div class="info infoLast" style="padding: 0;">
+                <ion-content style="padding: 0;">
+                    <ion-list>
+                        <ion-item>
+                            <ion-thumbnail item-start>
+                                <img src="assets/img/cocktailcubed.gif">
+                            </ion-thumbnail>
+                            <div>Traditional Cubed Ice</div>
+                            <p>20lb</p>
+                            <ion-row align-items-center>
+                                <ion-col col-3></ion-col>
+                                <ion-col class="icon-remove">
+                                    <ion-icon (click)= "decrease(3)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+                                </ion-col>
+                                <ion-col col-3 class="input-container">
+                                    <input [(ngModel)]="counter['3']" placeholder="1" style="width:100%"/>
+                                </ion-col>
+                                <ion-col class="icon-add">
+                                    <ion-icon (click)= "increase(3)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+                                </ion-col>
+                                
+                            </ion-row>
+
+                            <!--<button ion-button clear item-end>View</button>-->
+                        </ion-item>
+                        <ion-item>
+                            <ion-thumbnail item-start>
+                                <img src="assets/img/crystalclassic.gif">
+                            </ion-thumbnail>
+                            <h2>Crystal Classic Cubes</h2>
+                            <p>10lb</p>
+                            <ion-row align-items-center>
+                                <ion-col col-3>
+                                   
+       
+                                </ion-col>
+                                <ion-col class="icon-remove">
+                                    <ion-icon (click)= "decrease(4)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+                                </ion-col>
+                                <ion-col col-3 class="input-container">
+                                    <input [(ngModel)]="counter['4']" placeholder="1" style="width:100%"/>
+                                </ion-col>
+                                <ion-col class="icon-add">
+                                    <ion-icon (click)= "increase(4)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+                                </ion-col>
+                                
+                            </ion-row>
+                            <!--<button ion-button clear item-end>View</button>-->
+                        </ion-item>
+                        <ion-item>
+                            <ion-thumbnail item-start>
+                                <img src="assets/img/blockice.gif">
+                            </ion-thumbnail>
+                            <div>Block Ice</div>
+                            <p>10lb</p>
+                           <ion-row align-items-center>
+                                <ion-col col-3></ion-col>
+                                <ion-col class="icon-remove">
+                                    <ion-icon (click)= "decrease(5)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+                                </ion-col>
+                                <ion-col col-3 class="input-container">
+                                    <input [(ngModel)]="counter['5']" placeholder="1" style="width:100%"/>
+                                </ion-col>
+                                <ion-col class="icon-add">
+                                    <ion-icon (click)= "increase(5)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+                                </ion-col>
+                                
+                            </ion-row>
+                            <!--<button ion-button clear item-end>View</button>-->
+                        </ion-item>
+                        <ion-item>
+                            <ion-thumbnail item-start>
+                                <img src="assets/img/dryice.gif">
+                            </ion-thumbnail>
+                            <h2>Dry Ice</h2>
+                            <p>10lb</p>
+                           <ion-row align-items-center>
+                                <ion-col col-3></ion-col>
+                                <ion-col class="icon-remove">
+                                    <ion-icon (click)= "decrease()" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
+                                </ion-col>
+                                <ion-col col-3 class="input-container">
+                                    <input placeholder="1" style="width:100%"/>
+                                </ion-col>
+                                <ion-col class="icon-add">
+                                    <ion-icon (click)= "increase()" ios="ios-add-circle" md="md-add-circle"></ion-icon>
+                                </ion-col>
+                                
+                            </ion-row>
+                            <!--<button ion-button clear item-end>View</button>-->
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </div>
         </div>
-      </div>
-      <!-- <div class="productDetails">
+        <!-- <div class="productDetails">
             <ion-icon ios="ios-remove-circle-outline" md="md-remove-circle-outline"></ion-icon>
             <ion-icon ios="ios-add-circle-outline" md="md-add-circle-outline" style="float:right"></ion-icon>
             <br><br>

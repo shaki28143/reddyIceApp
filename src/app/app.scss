@@ -58,3 +58,23 @@
 .add-padding {
     padding: 10px;
 }
+.icon-remove{
+    text-align: right;
+    ion-icon{
+        color:#de0f0f;
+        font-size: 26px;
+    }
+}
+.icon-add{
+    ion-icon{
+        color:#1b6d1b;
+        font-size: 26px;
+    }
+}
+.input-container{
+    text-align: center;
+    input{
+        text-align: center;
+        max-width: 60px;
+    }
+}

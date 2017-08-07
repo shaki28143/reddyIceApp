@@ -8,25 +8,33 @@
 </ion-header>-->
 
 <div padding style="background-color: #fff; border-radius: 4px; margin: 10px; height: 97%; position: relative">
-  <div style="position: absolute; top: 11%; left: 13%">
+  <div style="position: absolute; top: 11%; left: 3%;right:3%">
     <div class="text-center add-margin" style="">
-        <a><img class="logo-img" src='../../assets/img/logo.png' /></a>
+        <a><img class="logo-img" src='assets/img/logo.png' /></a>
     </div>
     <div style="position: relative;">
-      <ion-list class="add-margin">
+        <ion-row>
+            <ion-col col-9>
+                <ion-list class="add-margin" style="margin-right:0px;">
           <ion-item style="border: none">
               <ion-input type="text" placeholder="Zipcode" style="border: solid 1px #cccccc; border-radius: 4px; height: 30px;">
-
+ 
               </ion-input>
 
           </ion-item>
       </ion-list>
-      <ion-icon name="locate" item-right style="position: absolute; right: 25px; top: 14px; transform: rotate(45deg)"></ion-icon>
+      <ion-icon name="locate" item-right style="position: absolute; right: 24px; top: 30px;"></ion-icon>
+            </ion-col>
+            <ion-col>
+                <ion-icon (click)="goToPage();" class="add-margin search-icon" style="margin-left:0px;" ios="ios-search" md="md-search"></ion-icon>
+            </ion-col>
+        </ion-row>
+      
     </div>
     <div padding class="text-center" style="font-size: 15px; font-weight: 300">OR</div>
 
     <div class="text-center">
-        <a><img (click)="goToPage();" class="bar-icon" src='../../assets/img/code.png' /></a>
+        <a><img (click)="startScanner();" class="bar-icon" src='assets/img/code.png' /></a>
     </div>
     <div class="text-center">
         <h3 style="font-size: 19px; font-weight: 300">Scan QR Code</h3>
