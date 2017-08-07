@@ -6,6 +6,10 @@ ion-input {
     border-bottom: 1px solid #00b9e8;
 }
 
+.frequently-viewed-accordion .scroll-content {
+  overflow: hidden;
+}
+
 .toolbar-ios ion-title {
     padding: 0;
 }

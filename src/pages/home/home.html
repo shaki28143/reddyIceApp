@@ -1,8 +1,5 @@
-<ion-header class="headerContainer">
+<ion-header class="headerContainer homePage">
     <ion-navbar class="navbar">
-        <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
         <ion-title>ReddyIce</ion-title>
     </ion-navbar>
 </ion-header>
@@ -15,14 +12,14 @@
     </ion-card>
     <div class="cartContainer">
       <div class="placeOrder" (click)="gotoPage()">
-          <img src="./assets/img/order.svg" style="width: 78px;">
-          <h3 class="cartTitle" style="font-size: 20px;font-weight: 300;">Place Order</h3>
+          <img src="./assets/img/orderTruck.svg" style="width: 78px;">
+          <h3 class="cartTitle" style="font-size: 20px;font-weight: 400;">Place Order</h3>
       </div>
     </div>
     <div class="cartContainer">
       <div class="customerComplain" (click)="gotoPageComplain()">
-          <img src="./assets/img/complaint1.png" style="height: 100px;">
-          <h3 class="cartTitle" style="font-size: 20px;font-weight: 300;">Customer Complain</h3>
+          <img src="./assets/img/customerComplaint.svg" style="height: 80px;">
+          <h3 class="cartTitle" style="font-size: 20px;font-weight: 400;">Customer Complain</h3>
       </div>
     </div>
 </ion-content>
