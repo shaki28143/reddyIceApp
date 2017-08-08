@@ -16,11 +16,11 @@ export class OrderPreview {
 
 	ngOnInit(){
 		this.orderPrevData = [
-			{"order": 'Traditional Cube Ice 10lb', "qty": 10, "image": 'assets/img/cocktailcubed.gif'},
-			{"order": 'Traditional Cube Ice 20lb', "qty": 10, "image": 'assets/img/cocktailcubed.gif'},
-			{"order": 'Crystal Classic Cube 5lb', "qty": 20, "image": 'assets/img/crystalclassic.gif'},
-			{"order": 'Dry Ice 10lb', "qty": 15, "image": 'assets/img/dryice.gif'},
-			{"order": 'Block Ice 10lb', "qty": 30, "image": 'assets/img/blockice.gif'},
+			{"order": 'Traditional Cube Ice 10lb', "qty": 10, "image": 'assets/img/cocktailcubed.gif', "price": '$12.90'},
+			{"order": 'Traditional Cube Ice 20lb', "qty": 10, "image": 'assets/img/cocktailcubed.gif', "price": '$19.90'},
+			{"order": 'Crystal Classic Cube 5lb', "qty": 20, "image": 'assets/img/crystalclassic.gif', "price": '$19.80'},
+			{"order": 'Dry Ice 10lb', "qty": 15, "image": 'assets/img/dryice.gif', "price": '$13.50'},
+			{"order": 'Block Ice 10lb', "qty": 30, "image": 'assets/img/blockice.gif', "price": '$24.00'},
 		];
   }
   showAlert() {

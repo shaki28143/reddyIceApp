@@ -10,13 +10,20 @@
 <ion-content padding>
   <div class="cartListContainer">
     <div style="display: flex; background:#1679b5;color:#fff; flex-direction: row; justify-content: space-between; width: 100%; padding: 14px; border-bottom: 1px solid #acacac;">
-      <div style="font-size: 15px; font-weight: 700">Item</div>
-      <div style="font-size: 15px; font-weight: 700">Quantity</div>
+      <div style="font-size: 15px; font-weight: 700; flex-grow: 3">Item</div>
+      <div style="font-size: 15px; font-weight: 700; flex-grow: 0.5">Quantity</div>
+      <div style="font-size: 15px; font-weight: 700; flex-grow: 0.2">Price</div>
     </div>
     <div *ngFor="let o of orderPrevData" style="display: flex; flex-direction: row; justify-content: space-between; width: 100%; padding: 16px; border-bottom: 1px solid #e6e6e6">
       <img src="{{o.image}}" style="width: 20px; height: 20px; margin-right: 10px" >
-      <div style="flex-grow: 1">{{o.order}}</div>
-      <div>{{o.qty}}</div>
+      <div style="width: 40%; margin-left: -50px">{{o.order}}</div>
+      <div style="margin-left: -28px">{{o.qty}}</div>
+      <div>{{o.price}}</div>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: flex-end; width: 100%; padding: 16px; border-bottom: 1px solid #e6e6e6">
+      <div style="flex-grow: 3.4; margin-left: 32px; font-weight: 500">Total</div>
+      <div style="flex-grow: 1.8; font-weight: 500">97</div>
+      <div style="flex-grow: 0; font-weight: 500">$90.10</div>
     </div>
   </div>
 
