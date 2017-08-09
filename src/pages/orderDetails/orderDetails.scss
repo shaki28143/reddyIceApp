@@ -74,15 +74,28 @@ body{
   }
 }
 
-.block input[type='radio']:checked ~ .info{
-  height: 260px;
-  transition: .3s ease-in;
+// .block input[type='radio']:checked ~ .info{
+//   height: 260px;
+//   transition: .3s ease-in;
+// }
+
+.expandFirstInfo {
+  height: 260px!important;
+  transition: .3s ease-in!important;
 }
 
-.block input[type='radio']:checked ~ .info.infoLast{
-  height: 320px;
-  transition: .3s ease-in;
+.expandLastInfo {
+  height: 320px!important;
+  transition: .3s ease-in!important;
 }
+
+
+
+
+// .block input[type='radio']:checked ~ .info.infoLast{
+//   height: 320px;
+//   transition: .3s ease-in;
+// }
 
 input[type='radio']{
   width: 100%;

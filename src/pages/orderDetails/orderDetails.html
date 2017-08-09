@@ -15,7 +15,7 @@
             <ion-icon class="toggle-icon" *ngIf="expanded1" ios="ios-add-circle" md="md-add-circle"></ion-icon>
              <ion-icon class="toggle-icon" *ngIf="!expanded1" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
             </label>
-            <div class="info" style="padding: 0;">
+            <div class="info" [ngClass]="{'expandFirstInfo': !expanded1}" style="padding: 0;">
                 <ion-content class="frequently-viewed-accordion">
                     <ion-list>
                         <ion-item>
@@ -25,29 +25,13 @@
                             <div>Traditional Cubed Ice</div>
                             <p style="display: inline">10lb</p>
                             <span style="font-weight: normal; margin-left: -11px; display: inline; font-size: 14px; font-family: Roboto, Helvetica Neue, sans-serif; color: #666">Amount: $1.29</span>
-                            <!-- <ion-row align-items-center>
-                                <ion-col col-3></ion-col>
-                                <ion-col class="icon-remove">
-                                    <ion-icon (click)="decrease(1)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
-                                </ion-col>
-                                <ion-col col-3 class="input-container">
-                                    <input [(ngModel)]="counter['1']" placeholder="1" style="width:100%" />
-                                </ion-col>
-                                <ion-col class="icon-add">
-                                    <ion-icon (click)="increase(1)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
-                                </ion-col>
-
-                            </ion-row> -->
                             <ion-row>
                                 <ion-col col-3>
                                 </ion-col>
                                 <ion-col col-9>
                                     <input type="text" value="1" placeholder="1" style="width:100%" />
                                 </ion-col>
-
                             </ion-row>
-
-                            <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
                         <ion-item>
                             <ion-thumbnail item-start>
@@ -62,25 +46,9 @@
                                 <ion-col col-9>
                                     <input type="text" value="1" placeholder="1" style="width:100%" />
                                 </ion-col>
-
                             </ion-row>
-                            <!-- <ion-row align-items-center>
-                                <ion-col col-3></ion-col>
-                                <ion-col class="icon-remove">
-                                    <ion-icon (click)= "decrease(3)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
-                                </ion-col>
-                                <ion-col col-3 class="input-container">
-                                    <input [(ngModel)]="counter['3']" placeholder="1" style="width:100%"/>
-                                </ion-col>
-                                <ion-col class="icon-add">
-                                    <ion-icon (click)= "increase(3)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
-                                </ion-col>
-
-                            </ion-row> -->
-
-                            <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
-                       
+
                     </ion-list>
                 </ion-content>
             </div>
@@ -93,7 +61,7 @@
 
             </label>
 
-            <div class="info infoLast" style="padding: 0;">
+            <div class="info" [ngClass]="{'expandLastInfo': !expanded2}" style="padding: 0;">
                 <ion-content style="padding: 0;">
                     <ion-list>
                      <ion-item>
@@ -103,19 +71,6 @@
                             <h2>Crystal Classic Cubes</h2>
                             <p style="display: inline;">5lb</p>
                             <span style="font-weight: normal; margin-left: -11px; display: inline; font-size: 14px; font-family: Roboto, Helvetica Neue, sans-serif; color: #666; margin-left: -11px">Amount: $0.99</span>
-                            <!-- <ion-row align-items-center>
-                                <ion-col col-3></ion-col>
-                                <ion-col class="icon-remove">
-                                    <ion-icon (click)="decrease(2)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
-                                </ion-col>
-                                <ion-col col-3 class="input-container">
-                                    <input [(ngModel)]="counter['2']" placeholder="1" style="width:100%" />
-                                </ion-col>
-                                <ion-col class="icon-add">
-                                    <ion-icon (click)="increase(2)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
-                                </ion-col>
-
-                            </ion-row> -->
                             <ion-row>
                                 <ion-col col-3>
                                 </ion-col>
@@ -124,10 +79,7 @@
                                 </ion-col>
 
                             </ion-row>
-                            <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
-                       
-                       
                         <ion-item>
                             <ion-thumbnail item-start>
                                 <img src="assets/img/crystalclassic.gif">
@@ -143,23 +95,6 @@
                                 </ion-col>
 
                             </ion-row>
-                            <!-- <ion-row align-items-center>
-                                <ion-col col-3>
-
-
-                                </ion-col>
-                                <ion-col class="icon-remove">
-                                    <ion-icon (click)= "decrease(4)" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
-                                </ion-col>
-                                <ion-col col-3 class="input-container">
-                                    <input [(ngModel)]="counter['4']" placeholder="1" style="width:100%"/>
-                                </ion-col>
-                                <ion-col class="icon-add">
-                                    <ion-icon (click)= "increase(4)" ios="ios-add-circle" md="md-add-circle"></ion-icon>
-                                </ion-col>
-
-                            </ion-row> -->
-                            <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
                         <ion-item>
                             <ion-thumbnail item-start>
@@ -177,7 +112,6 @@
                                 </ion-col>
 
                             </ion-row>
-                            <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
                         <ion-item>
                             <ion-thumbnail item-start>
@@ -194,77 +128,14 @@
                                 </ion-col>
 
                             </ion-row>
-                            <!-- <ion-row align-items-center>
-                                <ion-col col-3></ion-col>
-                                <ion-col class="icon-remove">
-                                    <ion-icon (click)= "decrease()" ios="ios-remove-circle" md="md-remove-circle"></ion-icon>
-                                </ion-col>
-                                <ion-col col-3 class="input-container">
-                                    <input placeholder="1" style="width:100%"/>
-                                </ion-col>
-                                <ion-col class="icon-add">
-                                    <ion-icon (click)= "increase()" ios="ios-add-circle" md="md-add-circle"></ion-icon>
-                                </ion-col>
-
-                            </ion-row> -->
-                            <!--<button ion-button clear item-end>View</button>-->
                         </ion-item>
                     </ion-list>
                 </ion-content>
             </div>
         </div>
-        <!-- <div class="productDetails">
-            <ion-icon ios="ios-remove-circle-outline" md="md-remove-circle-outline"></ion-icon>
-            <ion-icon ios="ios-add-circle-outline" md="md-add-circle-outline" style="float:right"></ion-icon>
-            <br><br>
-            <ion-input placeholder="10"></ion-input>
-            <br>
-            <span>10# COCKTAIL - 1000</span>
-        </div>
-        <div class="productDetails pull-right">
-            <ion-icon ios="ios-remove-circle-outline" md="md-remove-circle-outline"></ion-icon>
-            <ion-icon ios="ios-add-circle-outline" md="md-add-circle-outline" style="float:right"></ion-icon>
-            <br><br>
-            <ion-input placeholder="10"></ion-input>
-            <br>
-            <span>10# COCKTAIL - 1000</span>
-        </div>
-        <div class="productDetails">
-            <ion-icon ios="ios-remove-circle-outline" md="md-remove-circle-outline"></ion-icon>
-            <ion-icon ios="ios-add-circle-outline" md="md-add-circle-outline" style="float:right"></ion-icon>
-            <br><br>
-            <ion-input placeholder="10"></ion-input>
-            <br>
-            <span>10# COCKTAIL - 1000</span>
-        </div>
-        <div class="productDetails pull-right">
-            <ion-icon ios="ios-remove-circle-outline" md="md-remove-circle-outline"></ion-icon>
-            <ion-icon ios="ios-add-circle-outline" md="md-add-circle-outline" style="float:right"></ion-icon>
-            <br><br>
-            <ion-input placeholder="10"></ion-input>
-            <br>
-            <span>10# COCKTAIL - 1000</span>
-        </div>
-        <div class="productDetails">
-            <ion-icon ios="ios-remove-circle-outline" md="md-remove-circle-outline"></ion-icon>
-            <ion-icon ios="ios-add-circle-outline" md="md-add-circle-outline" style="float:right"></ion-icon>
-            <br><br>
-            <ion-input placeholder="10"></ion-input>
-            <br>
-            <span>10# COCKTAIL - 1000</span>
-        </div>
-        <div class="productDetails pull-right">
-            <ion-icon ios="ios-remove-circle-outline" md="md-remove-circle-outline"></ion-icon>
-            <ion-icon ios="ios-add-circle-outline" md="md-add-circle-outline" style="float:right"></ion-icon>
-            <br><br>
-            <ion-input placeholder="10"></ion-input>
-            <br>
-            <span>10# COCKTAIL - 1000</span>
-        </div> -->
     </div>
 
     <div class="checkOut">
-        <!-- <button (click)="gotoPage()" ion-button>Checkout</button> -->
         <button style="background-color: #1679b5; color: #fff" (click)="gotoPage()" ion-button color="primary" full>Checkout</button>
     </div>
 </ion-content>
